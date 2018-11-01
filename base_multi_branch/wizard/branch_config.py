@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# Part of Odoo, odoo. See LICENSE file for full copyright and licensing details.
-
 from odoo import api, models, fields
 
 
@@ -54,7 +51,7 @@ class BarnchConfiguration(models.TransientModel):
                     'partner_id': branch.partner_id.id,
                     'branch_id': branch.id})
         view_id = self.env.ref(
-            'base_branch_company.view_branch_config')
+            'base_multi_branch.view_branch_config')
         context = dict(self._context)
         return {'views': [(view_id.id, 'form')], 'view_id': view_id.id,
                 'type': 'ir.actions.act_window', 'view_type': 'form',

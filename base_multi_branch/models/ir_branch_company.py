@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# Part of odoo. See LICENSE file for full copyright and licensing details.
-
 from odoo import fields, models
 
 
@@ -20,4 +17,4 @@ class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
     group_multi_branch = fields.Boolean(
-        "Multi Branch", implied_group='base_branch_company.group_multi_branch')
+        "Multi Branch", implied_group='base_multi_branch.group_multi_branch')

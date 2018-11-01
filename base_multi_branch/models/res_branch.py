@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from odoo import api, fields, models
 from odoo import SUPERUSER_ID
 # from odoo.exceptions import ValidationError
@@ -9,11 +7,11 @@ def migrate_company_branch(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})
     company = env.ref('base.main_company')
     company.write({'branch_id': env.ref(
-        'base_branch_company.data_branch_1').id})
+        'base_multi_branch.data_branch_1').id})
     cr.commit()
     user_ids = env['res.users'].search([])
     for user_id in user_ids:
-        if not user_id.user_has_groups('base_branch_company.group_multi_branch'):
+        if not user_id.user_has_groups('base_multi_branch.group_multi_branch'):
             user_id.sudo().write({'default_branch_id': user_id.company_id.branch_id.id,
                                   'branch_ids': [(6, 0, [user_id.company_id.branch_id.id])]})
             cr.commit()

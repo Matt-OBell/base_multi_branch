@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# Part of odoo. See LICENSE file for full copyright and licensing details.
-
 from odoo.tests.common import TransactionCase
 import logging
 _logger = logging.getLogger(__name__)
@@ -12,8 +9,8 @@ class TestMultiBranch(TransactionCase):
         self.partner_obj = self.env['res.partner']
         self.main_company = self.env.ref('base.main_company')
 
-        self.branch0 = self.env.ref('base_branch_company.data_branch_1')
-        self.branch1 = self.env.ref('base_branch_company.data_branch_2')
+        self.branch0 = self.env.ref('base_multi_branch.data_branch_1')
+        self.branch1 = self.env.ref('base_multi_branch.data_branch_2')
 
         self.user_1 = self.create_user(
             self.main_company, 'user_1', self.branch0,
