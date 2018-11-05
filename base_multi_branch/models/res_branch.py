@@ -85,3 +85,9 @@ class ResBranch(models.Model):
             for record in self:
                 record.partner_id.write(vals)
         return res
+
+    @api.model
+    def _branch_default_get(self):
+        """ Returns the default branch (usually the user's branch with a company).
+        """
+        return self.env['res.users']._get_branch()

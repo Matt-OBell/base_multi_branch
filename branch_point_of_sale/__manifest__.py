@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "point_of_sale",
+    'name': "Point of sale branch Operation",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'base_multi_branch', 'point_of_sale'],
 
     # always loaded
     'data': [
