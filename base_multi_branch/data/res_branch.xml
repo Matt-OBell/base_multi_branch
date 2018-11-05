@@ -3,15 +3,15 @@
     <data noupdate="1">
 
         <record id="data_branch_1" model="res.branch">
-            <field name="name">Your Company</field>
+            <field name="name">Branch 1</field>
             <field name="code">YC</field>
             <field name="company_id" ref="base.main_company"/>
-            <field name="street">80 Broad St</field>
-            <field name="city">Scranton</field>
+            <field name="street">80 Opebi Road</field>
+            <field name="city">Allen Avenue</field>
             <field name="zip">10004</field>
             <field name='country_id' ref='base.us'/>
             <field name='state_id' ref='base.state_us_27'/>
-            <field name="phone">+1 485 123 8989</field>
+            <field name="phone">+08078956732</field>
         </record>
 
         <record id="base.user_root" model="res.users">

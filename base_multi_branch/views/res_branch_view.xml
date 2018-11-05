@@ -90,8 +90,8 @@
             <xpath expr="//page[@name='access_rights']/group[1]" position="after">
                 <group groups="base_multi_branch.group_multi_branch">
                     <group string="Allowed Branches" attrs="{'invisible': [('branches_count', '&lt;=', 1)]}">
-                            <field name="default_branch_id" required="1"/>
                             <field name="branch_ids" widget="many2many_tags"/>
+                            <field name="default_branch_id" required="1"/>
                             <field string="Branches count" name="branches_count" invisible="1"/>
                     </group>
                 </group>
